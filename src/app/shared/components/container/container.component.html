@@ -1,0 +1,5 @@
+<div [class]="ngClass">
+    <app-loader *ngIf="loading"  [loaderMessage]="loaderMessage" />
+    <app-error *ngIf="hasError" [errorMessage]="errorMessage"/>
+    <ng-content *ngIf="!loading&&!hasError"></ng-content>
+</div>
