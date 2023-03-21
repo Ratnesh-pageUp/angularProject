@@ -1,0 +1,7 @@
+<mat-form-field appearance="fill">
+  <mat-label>{{title|titlecase}}</mat-label>
+  <mat-select disableRipple>
+    <mat-option *ngFor="let option of options" (click)="select(option)" value="1">{{option|titlecase}}</mat-option>
+  </mat-select>
+</mat-form-field> 
+<p *ngIf="options.length===0" class="text-danger">Option list is not provided</p>

@@ -1,1 +1,5 @@
-<p>admin works!</p>
+<app-header-with-sidebar>
+  <app-loader *ngIf="tableData.length==0"></app-loader>
+  <app-data-table (onButtonClick)="getAction($event)" [ActionColumnAt]="2" [actionButtonsName]="actionButtonsName" [enableAction]="true" [tableData]="tableData" [columnNames]="columnName" *ngIf="!adminOutlet.isActivated && tableData.length>0"></app-data-table>
+  <router-outlet #adminOutlet="outlet"></router-outlet>
+</app-header-with-sidebar>

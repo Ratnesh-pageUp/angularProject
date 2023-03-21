@@ -19,10 +19,7 @@ import { HomeComponent } from './pages/home/home.component';
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    FormsModule,
-    ReactiveFormsModule,
     SharedModule,
-    MatIconModule
   ],
   providers: [{provide:HTTP_INTERCEPTORS,useClass:AuthInterceptor,multi:true}],
   bootstrap: [AppComponent],
