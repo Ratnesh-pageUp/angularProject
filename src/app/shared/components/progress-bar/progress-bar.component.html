@@ -1,1 +1,2 @@
-<mat-progress-bar *ngIf="sus.progressBarValue<100" color="warn" [mode]="mode" [value]="sus.progressBarValue"></mat-progress-bar>
+<mat-progress-bar *ngIf="(!static)&&sus.progressBarValue<100" color="warn" [mode]="mode" [value]="sus.progressBarValue"></mat-progress-bar>
+<mat-progress-bar *ngIf="static" color="warn" [mode]="mode"></mat-progress-bar>

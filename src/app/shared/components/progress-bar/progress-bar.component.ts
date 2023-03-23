@@ -14,8 +14,13 @@ export declare type ProgressBarMode =
 })
 export class ProgressBarComponent implements OnInit {
   @Input() mode: ProgressBarMode = 'query';
+  @Input() static: boolean = false;
 
   constructor(public sus: StyleUtilityService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    if(this.static&&this.mode=='determinate'){
+      this.mode='query'
+    }
+  }
 }
